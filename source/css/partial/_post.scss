@@ -84,7 +84,7 @@ $content-table-bg: lighten(#f8f5ec, 30%) !default;
         }
 
         &::before {
-          content: $content-headerlink-content;
+          content: "§";
           margin-right: 5px;
           font-size: 1.1em;
         }

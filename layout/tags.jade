@@ -1,8 +1,16 @@
-extends partial/layout
-include mixins/tags
+//- Post tags
+mixin tags()
+  if page.tags
+    .tags
+      for tag in page.tags.toArray()
+        a(href=url_for(tag.path))
+          = tag.name
 
-block title
-  title= __('Tags') + ' · ' + config.title
-  
-block container
-  +tagcloud()
+//- Tag cloud
+mixin tagcloud()
+  .tagcloud
+    div.total
+      if site.tags.length != 0
+        p!= __('tags_total')
+          span!= '（' + site.tags.length + '）'
+    != tagcloud({min_font: 16, max_font: 26, amount: 100, orderby: 'count'})
