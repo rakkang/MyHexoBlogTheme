@@ -57,7 +57,7 @@ $global-font-size: 100% !default;
 
 // Global width of the site
 // @type Number
-$global-body-width: 800px !default;
+$global-body-width: 1000px !default;
 
 // Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px.
 // @type Number
@@ -79,9 +79,7 @@ $body-background: $global-white !default;
 
 // Border top of body
 // @type List
-$body-border-top: 3px solid $global-theme-color !default;
-
-// Margin of the container
+$body-border-top: 3px solid $global-theme-color !default; // Margin of the container
 // @type Number
 $body-container-margin: 32px 20px !default;
 
